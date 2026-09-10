@@ -1,0 +1,33 @@
+# Cabeçalhos de segurança — formato usado por Netlify e Cloudflare Pages.
+# Copie este arquivo para a RAIZ do site publicado (ao lado de index.html).
+#
+# A CSP abaixo é estrita de propósito: o site não carrega nada de
+# terceiros (scripts, estilos, fontes e imagens são todos locais).
+# Se um dia entrar algum recurso externo, libere apenas a origem
+# necessária — nunca use 'unsafe-inline' ou 'unsafe-eval'.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; manifest-src 'self'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache: os arquivos com conteúdo estável podem ficar muito tempo.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/images/*
+  Cache-Control: public, max-age=2592000
+
+/assets/css/*
+  Cache-Control: public, max-age=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=604800
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

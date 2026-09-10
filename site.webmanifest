@@ -1,0 +1,29 @@
+{
+  "name": "Wotan's House",
+  "short_name": "Wotan's House",
+  "description": "Carnes na brasa, chopp gelado, drinks e um ambiente especial para reunir amigos e familia.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0908",
+  "theme_color": "#0b0908",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/images/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/brand/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/brand/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

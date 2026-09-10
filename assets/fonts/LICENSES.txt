@@ -1,0 +1,17 @@
+Fontes usadas neste projeto
+============================
+
+Cinzel — SIL Open Font License 1.1
+  Copyright (c) Natanael Gama
+  https://fonts.google.com/specimen/Cinzel
+
+Inter — SIL Open Font License 1.1
+  Copyright (c) The Inter Project Authors
+  https://fonts.google.com/specimen/Inter
+
+Os arquivos .woff2 desta pasta sao subconjuntos latinos, hospedados
+localmente para que o site nao faca nenhuma requisicao a servidores de
+terceiros (privacidade do visitante + Content-Security-Policy estrita).
+
+O texto completo da licenca OFL 1.1 esta em:
+https://openfontlicense.org/

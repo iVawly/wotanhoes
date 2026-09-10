@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Wotan's House | Carnes, Churrasco, Chopp e Bons Momentos</title>
+    <meta
+      name="description"
+      content="Wotan's House — carnes na brasa, chopp gelado, drinks e um ambiente especial para reunir amigos e família."
+    />
+    <meta name="theme-color" content="#0b0908" />
+    <meta name="author" content="Wotan's House" />
+    <link rel="canonical" href="https://www.wotanshouse.example/" />
+
+    <!--
+      Política de segurança de conteúdo (defesa em profundidade).
+      O site não carrega nada de terceiros: scripts, estilos, fontes e
+      imagens são todos locais. Em produção, envie os mesmos cabeçalhos
+      pelo servidor — veja a pasta server/.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; manifest-src 'self'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Open Graph / redes sociais -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:site_name" content="Wotan's House" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Wotan's House | Carnes, Churrasco, Chopp e Bons Momentos" />
+    <meta
+      property="og:description"
+      content="Carnes na brasa, chopp gelado, drinks e um ambiente especial para reunir amigos e família."
+    />
+    <meta property="og:url" content="https://www.wotanshouse.example/" />
+    <meta property="og:image" content="https://www.wotanshouse.example/assets/images/brand/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Monograma do Wotan's House sobre fundo de brasa" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Wotan's House | Carnes, Churrasco, Chopp e Bons Momentos" />
+    <meta
+      name="twitter:description"
+      content="Carnes na brasa, chopp gelado, drinks e um ambiente especial para reunir amigos e família."
+    />
+    <meta name="twitter:image" content="https://www.wotanshouse.example/assets/images/brand/og-image.png" />
+
+    <!-- Ícones -->
+    <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/images/brand/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/images/brand/favicon-180.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Recursos críticos -->
+    <link
+      rel="preload"
+      href="assets/fonts/cinzel-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/inter-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
+
+    <!--
+      Dados estruturados do restaurante.
+      ATENÇÃO: é o único lugar que repete informações de assets/js/config.js.
+      Ao mudar endereço, telefone ou horários, atualize os dois.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Wotan's House",
+        "description": "Carnes na brasa, churrasco, hambúrgueres, porções, chopp, drinks e sobremesas em um ambiente rústico e acolhedor.",
+        "slogan": "Fogo, sabor e boas histórias à mesa.",
+        "url": "https://www.wotanshouse.example/",
+        "image": "https://www.wotanshouse.example/assets/images/brand/og-image.png",
+        "telephone": "+55 47 3333-0000",
+        "servesCuisine": ["Churrasco", "Carnes", "Hambúrgueres", "Bar"],
+        "priceRange": "R$$",
+        "acceptsReservations": "True",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Alberto Zanella, 0000",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+            "opens": "18:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday"],
+            "opens": "18:00",
+            "closes": "23:59"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "11:30",
+            "closes": "22:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ============================ CABEÇALHO ============================ -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Wotan's House — ir para o início">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" />
+            </svg>
+          </span>
+          <span>
+            <span class="brand__name">Wotan&rsquo;s House</span>
+            <span class="brand__tagline">Brasa &amp; Bar</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <ul class="nav-desktop__list">
+            <li><a class="nav-link" href="#inicio" data-nav-link>Início</a></li>
+            <li><a class="nav-link" href="#cardapio" data-nav-link>Cardápio</a></li>
+            <li><a class="nav-link" href="#historia" data-nav-link>Nossa História</a></li>
+            <li><a class="nav-link" href="#galeria" data-nav-link>Galeria</a></li>
+            <li><a class="nav-link" href="#localizacao" data-nav-link>Localização</a></li>
+            <li><a class="nav-link" href="#contato" data-nav-link>Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn--outline btn--sm" href="#cardapio">Ver cardápio</a>
+          <a class="btn btn--whats btn--sm" href="#contato" data-link="whatsapp">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+    <nav class="nav-mobile" id="mobile-nav" aria-label="Navegação principal (celular)" hidden>
+      <ul class="nav-mobile__list">
+        <li>
+          <a class="nav-mobile__link" href="#inicio" data-nav-link>Início
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="nav-mobile__link" href="#cardapio" data-nav-link>Cardápio
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="nav-mobile__link" href="#historia" data-nav-link>Nossa História
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="nav-mobile__link" href="#galeria" data-nav-link>Galeria
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="nav-mobile__link" href="#localizacao" data-nav-link>Localização
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+        <li>
+          <a class="nav-mobile__link" href="#contato" data-nav-link>Contato
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-mobile__actions">
+        <a class="btn btn--whats btn--block" href="#contato" data-link="whatsapp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" />
+          </svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn--outline btn--block" href="https://www.ifood.com.br/" data-link="ifood">Pedir pelo iFood</a>
+      </div>
+    </nav>
+
+    <main id="conteudo">
+      <!-- ============================== HERO ============================== -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <picture>
+            <source media="(max-width: 40rem)" srcset="assets/images/hero/hero-brasa-mobile.svg" />
+            <img
+              src="assets/images/hero/hero-brasa.svg"
+              alt="Carne grelhando sobre a brasa na churrasqueira do Wotan's House"
+              width="1920"
+              height="1080"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="container hero__inner">
+          <p class="hero__eyebrow">
+            <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+            Carnes &middot; Brasa &middot; Chopp
+          </p>
+
+          <h1 class="hero__title" id="hero-title">Wotan&rsquo;s House</h1>
+          <p class="hero__tagline" data-text="brand.tagline">Fogo, sabor e boas histórias à mesa.</p>
+          <p class="hero__intro" data-text="brand.intro">
+            Uma experiência de carnes, brasa, chopp e bons momentos.
+          </p>
+
+          <p class="open-state" id="open-state">
+            <span class="open-state__dot" aria-hidden="true"></span>
+            <span class="open-state__label">Terça a domingo</span>
+          </p>
+
+          <div class="btn-row hero__actions">
+            <a class="btn btn--primary" href="#cardapio">Ver cardápio</a>
+            <a class="btn btn--outline" href="https://www.ifood.com.br/" data-link="ifood">Pedir pelo iFood</a>
+          </div>
+
+          <a class="hero__whats" href="#contato" data-link="whatsapp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" />
+            </svg>
+            Reservar pelo WhatsApp
+          </a>
+        </div>
+
+        <a class="hero__scroll" href="#experiencia" aria-label="Ir para a próxima seção">
+          Role para ver mais
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v15" /><path d="M6 13.5 12 19.5l6-6" /></svg>
+        </a>
+      </section>
+
+      <!-- =========================== EXPERIÊNCIA =========================== -->
+      <section class="section section--alt texture-wood" id="experiencia" aria-labelledby="experiencia-title">
+        <div class="container">
+          <div class="pitch">
+            <div class="pitch__text" data-reveal>
+              <p class="eyebrow">
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+                A casa
+              </p>
+              <h2 class="section-title" id="experiencia-title">Mais que uma refeição.<br />Uma experiência.</h2>
+              <p class="pitch__lead mt-sm">
+                No Wotan&rsquo;s House, o fogo é parte da nossa identidade.
+              </p>
+              <p class="mt-sm text-muted">
+                Carnes selecionadas, preparo cuidadoso, bebidas geladas e um ambiente pensado para transformar
+                cada encontro em uma boa história.
+              </p>
+              <div class="btn-row mt-md">
+                <a class="btn btn--gold" href="#cardapio">Conhecer o cardápio</a>
+                <a class="btn btn--ghost" href="#historia">Nossa história</a>
+              </div>
+            </div>
+
+            <ul class="features" data-reveal>
+              <li class="feature">
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4.2 10.4c0-3.4 3.5-6.2 7.8-6.2s7.8 2.8 7.8 6.2-3.5 8.4-7.8 8.4-7.8-5-7.8-8.4z" /><path d="M9 9.5c1.6-1 3.6-1 5.2 0" /></svg>
+                </span>
+                <h3 class="feature__title">Carnes selecionadas</h3>
+                <p class="feature__text">Cortes escolhidos um a um, maturados e preparados no ponto que você pedir.</p>
+              </li>
+              <li class="feature">
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+                </span>
+                <h3 class="feature__title">Fogo e brasa</h3>
+                <p class="feature__text">Churrasqueira acesa desde o fim da tarde, com lenha e carvão de verdade.</p>
+              </li>
+              <li class="feature">
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M6 6.6h9.2v12.8H6z" /><path d="M15.2 9h2.4a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2.4" /><path d="M6 10.4h9.2" /></svg>
+                </span>
+                <h3 class="feature__title">Chopp gelado</h3>
+                <p class="feature__text">Tirado na pressão certa, com colarinho na medida e temperatura constante.</p>
+              </li>
+              <li class="feature">
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8.4 4.6h7.2l1.2 3.2v9.4a2.4 2.4 0 0 1-2.4 2.4H9.6a2.4 2.4 0 0 1-2.4-2.4V7.8z" /><path d="M12 2.4v2.2" /><path d="M7.2 8.4h9.6" /></svg>
+                </span>
+                <h3 class="feature__title">Ambiente acolhedor</h3>
+                <p class="feature__text">Madeira, ferro e luz quente — feito para conversas que passam da meia-noite.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ DESTAQUES ============================ -->
+      <section class="section" id="destaques" aria-labelledby="destaques-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Destaques da casa
+            </p>
+            <h2 class="section-title" id="destaques-title">O que sai mais da brasa</h2>
+            <p class="section-lead">
+              Os pratos que fizeram a fama do Wotan&rsquo;s House. Se for a sua primeira visita, comece por aqui.
+            </p>
+          </div>
+
+          <div class="featured-grid" id="featured-list" data-reveal>
+            <!-- cards gerados a partir de assets/js/data/menu.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= CARDÁPIO ============================= -->
+      <section class="section section--alt" id="cardapio" aria-labelledby="cardapio-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Cardápio
+            </p>
+            <h2 class="section-title" id="cardapio-title">Do corte ao último gole</h2>
+            <p class="section-lead">
+              Carnes, hambúrgueres, porções, acompanhamentos, chopp, drinks e sobremesas. Filtre por categoria
+              para encontrar o que você procura.
+            </p>
+          </div>
+        </div>
+
+        <div class="menu-toolbar">
+          <div class="container">
+            <div class="menu-filters" id="menu-filters" role="group" aria-label="Filtrar cardápio por categoria">
+              <!-- botões de filtro gerados por JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="sr-only" id="menu-status" role="status" aria-live="polite"></p>
+
+          <noscript>
+            <p class="menu-note">
+              O cardápio completo precisa de JavaScript para ser exibido. Ative o JavaScript ou chame a gente no
+              WhatsApp pelo <strong>+55 (47) 99999-0000</strong> que enviamos o cardápio.
+            </p>
+          </noscript>
+
+          <div class="menu-list" id="menu-list">
+            <!-- grupos e cards gerados a partir de assets/js/data/menu.js -->
+          </div>
+
+          <div class="menu-note" data-reveal>
+            <p>
+              Preços e disponibilidade podem variar conforme a época do ano. Trabalhamos com cortes frescos, então
+              alguns itens saem do cardápio quando acabam no dia.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn--primary btn--sm" href="https://www.ifood.com.br/" data-link="ifood">Pedir pelo iFood</a>
+              <a class="btn btn--outline btn--sm" href="#contato" data-link="whatsapp">Tirar dúvidas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= HISTÓRIA ============================= -->
+      <section class="section" id="historia" aria-labelledby="historia-title">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Quem somos
+            </p>
+            <h2 class="section-title" id="historia-title">Nossa História</h2>
+          </div>
+
+          <div class="story">
+            <article class="story-block" data-reveal>
+              <figure class="story-block__media">
+                <img
+                  src="assets/images/about/fachada.webp"
+                  alt="Fachada do Wotan&rsquo;s House ao anoitecer, com o letreiro vertical Hamburgueria, o mezanino envidraçado e a cidade ao fundo"
+                  width="382"
+                  height="510"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="story-block__text">
+                <p class="pitch__lead">
+                  O Wotan&rsquo;s House nasceu de uma paixão simples: reunir pessoas em torno de uma boa mesa.
+                </p>
+                <p>
+                  Inspirado na força das antigas tradições de celebração, onde o fogo, a carne e a bebida eram
+                  motivos para reunir amigos, o Wotan&rsquo;s House foi criado para trazer essa essência para os
+                  dias de hoje, combinando o sabor de um bom churrasco com a experiência de um restaurante moderno
+                  e acolhedor.
+                </p>
+                <p>
+                  Aqui, o fogo é parte da nossa identidade. Selecionamos carnes de qualidade e valorizamos cada
+                  etapa do preparo, buscando aquele sabor marcante de uma carne bem feita, acompanhada de
+                  ingredientes que completam a experiência.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-block story-block--reverse" data-reveal>
+              <figure class="story-block__media">
+                <img
+                  src="assets/images/about/about-mesa.svg"
+                  alt="Mesa de madeira posta para o jantar no salão do restaurante"
+                  width="1000"
+                  height="750"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="story-block__text">
+                <p class="pitch__lead">Mas o Wotan&rsquo;s House vai além da carne.</p>
+                <p>
+                  É lugar para chegar depois do trabalho e tomar um chopp gelado, reunir os amigos para uma noite
+                  descontraída, comemorar uma data especial ou simplesmente sentar à mesa e aproveitar uma boa
+                  refeição.
+                </p>
+                <p>
+                  Nosso ambiente mistura o rústico e o sofisticado, criando um espaço onde a tradição do churrasco
+                  encontra a gastronomia contemporânea. Tudo foi pensado para que cada visita seja mais do que uma
+                  refeição: seja um momento para lembrar.
+                </p>
+              </div>
+            </article>
+
+            <blockquote class="story-quote" data-reveal>
+              <p>Wotan&rsquo;s House. Fogo, sabor e boas histórias à mesa.</p>
+              <footer>Desde 2018</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== GALERIA ============================== -->
+      <section class="section section--deep" id="galeria" aria-labelledby="galeria-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Galeria
+            </p>
+            <h2 class="section-title" id="galeria-title">Um pouco da nossa noite</h2>
+            <p class="section-lead">
+              Toque em qualquer foto para ampliar. Use as setas do teclado ou arraste para navegar.
+            </p>
+          </div>
+
+          <div class="gallery-grid" id="gallery-grid" data-reveal>
+            <!-- imagens geradas a partir de assets/js/data/gallery.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== LOCALIZAÇÃO =========================== -->
+      <section class="section" id="localizacao" aria-labelledby="localizacao-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Onde estamos
+            </p>
+            <h2 class="section-title" id="localizacao-title">Localização e horários</h2>
+            <p class="section-lead">
+              Estacionamento na rua, entrada pelo portão de ferro. Reservas para grupos pelo WhatsApp.
+            </p>
+          </div>
+
+          <div class="place">
+            <div data-reveal>
+              <div class="panel">
+                <h3 class="panel__title">
+                  <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" /><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /></svg>
+                  Onde estamos
+                </h3>
+                <address class="address">
+                  <strong data-text="address.street">Rua Alberto Zanella, 0000</strong>
+                  <span data-text="address.reference">Em frente ao Castelo</span><br />
+                  <span data-text="address.country">Brasil</span>
+                </address>
+                <div class="btn-row mt-md">
+                  <a class="btn btn--gold btn--sm" href="https://www.google.com/maps" data-link="maps">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /><path d="M17.5 20.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /><path d="M6.5 8.5v4a5.5 5.5 0 0 0 5.5 5.5h5.5" /></svg>
+                    Como chegar
+                  </a>
+                  <a class="btn btn--outline btn--sm" href="#contato" data-link="whatsapp">Chamar no WhatsApp</a>
+                </div>
+              </div>
+
+              <div class="panel">
+                <h3 class="panel__title">
+                  <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" /><path d="M12 7.2V12l3.2 2" /></svg>
+                  Horário de funcionamento
+                </h3>
+                <dl class="hours" id="hours-list">
+                  <!-- horários vindos de assets/js/config.js -->
+                </dl>
+                <p class="form-note mt-sm">
+                  A cozinha encerra os pedidos 30 minutos antes do fechamento.
+                </p>
+              </div>
+            </div>
+
+            <div data-reveal>
+              <!-- Mapa ilustrativo: o endereço é fictício, então nenhum mapa real é incorporado. -->
+              <div class="map-card" role="img" aria-label="Mapa ilustrativo: Wotan's House na Rua Alberto Zanella, em frente ao Castelo">
+                <div class="map-card__grid" aria-hidden="true"></div>
+                <div class="map-card__road" aria-hidden="true"></div>
+                <span class="map-card__road-label" aria-hidden="true">Rua Alberto Zanella</span>
+
+                <div class="map-pin" aria-hidden="true">
+                  <span class="map-pin__dot">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+                  </span>
+                  <span class="map-pin__label">Wotan&rsquo;s House</span>
+                </div>
+
+                <div class="map-landmark" aria-hidden="true">
+                  <span class="map-landmark__icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 20h16" /><path d="M5 20V9l2-2v2h3V7l2-2 2 2v2h3V7l2 2v11" /><path d="M10 20v-4h4v4" /></svg>
+                  </span>
+                  Castelo
+                </div>
+
+                <div class="map-card__content">
+                  <p class="form-note">
+                    Mapa ilustrativo. Toque em <strong>Como chegar</strong> para abrir a rota no aplicativo de mapas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="panel mt-sm">
+                <h3 class="panel__title">
+                  <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10.4h18" /><path d="M5.4 10.4 4 19.6" /><path d="M18.6 10.4 20 19.6" /><path d="M12 10.4v9.2" /><path d="M7.6 6.6h8.8v3.8H7.6z" /></svg>
+                  Reservar uma mesa
+                </h3>
+                <p class="form-note mb-sm">
+                  Preencha os dados e enviaremos você direto para o nosso WhatsApp com a mensagem pronta.
+                </p>
+
+                <form id="reservation-form" class="form-grid" novalidate>
+                  <div class="form-grid form-grid--2">
+                    <div class="field">
+                      <label class="field__label" for="reserva-nome">Nome</label>
+                      <input
+                        class="field__control"
+                        id="reserva-nome"
+                        name="nome"
+                        type="text"
+                        maxlength="60"
+                        autocomplete="name"
+                        placeholder="Seu nome"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label class="field__label" for="reserva-pessoas">Pessoas</label>
+                      <input
+                        class="field__control"
+                        id="reserva-pessoas"
+                        name="pessoas"
+                        type="number"
+                        min="1"
+                        max="30"
+                        step="1"
+                        inputmode="numeric"
+                        placeholder="4"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-grid form-grid--2">
+                    <div class="field">
+                      <label class="field__label" for="reserva-data">Data</label>
+                      <input class="field__control" id="reserva-data" name="data" type="date" required />
+                    </div>
+                    <div class="field">
+                      <label class="field__label" for="reserva-horario">Horário</label>
+                      <input class="field__control" id="reserva-horario" name="horario" type="time" required />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="reserva-observacoes">Observações (opcional)</label>
+                    <textarea
+                      class="field__control"
+                      id="reserva-observacoes"
+                      name="observacoes"
+                      maxlength="240"
+                      placeholder="Aniversário, mesa perto da churrasqueira, cadeira para criança..."
+                    ></textarea>
+                  </div>
+
+                  <p class="form-feedback" id="reservation-feedback" role="status" aria-live="polite" hidden></p>
+
+                  <button class="btn btn--whats btn--block" type="submit">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" />
+                    </svg>
+                    Enviar pelo WhatsApp
+                  </button>
+
+                  <p class="form-note">
+                    Nada é enviado ou armazenado por este site: o formulário apenas abre a conversa no WhatsApp com a
+                    mensagem já escrita.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CONTATO ============================== -->
+      <section class="section section--alt" id="contato" aria-labelledby="contato-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c2.9 3.9 4.9 6 4.9 9a4.9 4.9 0 0 1-9.8 0c0-1.2.5-2.3 1.4-3.3.3 1.2 1 2 1.9 2.2C9.9 8.6 10.5 5.6 12 2.5z" /></svg>
+              Contato
+            </p>
+            <h2 class="section-title" id="contato-title">Fale com a gente</h2>
+            <p class="section-lead">
+              Pedidos, reservas, eventos ou aquela dúvida sobre o ponto da carne. Estamos por aqui.
+            </p>
+          </div>
+
+          <div class="contact-grid" data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" /></svg>
+              </span>
+              <p class="contact-card__label">WhatsApp</p>
+              <p class="contact-card__value" data-text="contact.whatsapp">+55 (47) 99999-0000</p>
+              <a class="contact-card__link" href="#contato" data-link="whatsapp">
+                Abrir conversa
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+              </a>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M6.5 3.5h3l1.5 3.8-2 1.4a11.5 11.5 0 0 0 5.3 5.3l1.4-2 3.8 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" /></svg>
+              </span>
+              <p class="contact-card__label">Telefone</p>
+              <p class="contact-card__value" data-text="contact.phone">+55 (47) 3333-0000</p>
+              <a class="contact-card__link" href="tel:+554733330000" data-link="phone">
+                Ligar agora
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+              </a>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4z" /><path d="M12 15.6a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z" /><path d="M17.2 7.1h.01" /></svg>
+              </span>
+              <p class="contact-card__label">Instagram</p>
+              <p class="contact-card__value" data-text="contact.instagram">@wotanshouse</p>
+              <a class="contact-card__link" href="https://www.instagram.com/" data-link="instagram">
+                Ver perfil
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+              </a>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" /><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /></svg>
+              </span>
+              <p class="contact-card__label">Endereço</p>
+              <p class="contact-card__value" data-text="address.oneLine">
+                Rua Alberto Zanella, 0000 — Em frente ao Castelo
+              </p>
+              <a class="contact-card__link" href="https://www.google.com/maps" data-link="maps">
+                Como chegar
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="cta-band" data-reveal>
+            <div>
+              <h3 class="cta-band__title">Com fome agora?</h3>
+              <p>Peça pelo iFood e receba em casa, ou reserve sua mesa e venha sentir o cheiro da brasa de perto.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://www.ifood.com.br/" data-link="ifood">Pedir pelo iFood</a>
+              <a class="btn btn--outline" href="#contato" data-link="whatsapp-reserva">Reservar mesa</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== RODAPÉ ============================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-brand__name" data-text="brand.name">Wotan&rsquo;s House</p>
+            <p class="footer-brand__tagline" data-text="brand.tagline">Fogo, sabor e boas histórias à mesa.</p>
+            <div class="footer-social">
+              <a class="social-link" href="https://www.instagram.com/" data-link="instagram" aria-label="Instagram do Wotan's House">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4z" /><path d="M12 15.6a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z" /><path d="M17.2 7.1h.01" /></svg>
+              </a>
+              <a class="social-link" href="#contato" data-link="whatsapp" aria-label="WhatsApp do Wotan's House">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" /></svg>
+              </a>
+              <a class="social-link" href="https://www.ifood.com.br/" data-link="ifood" aria-label="Pedir pelo iFood">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.1 11.2a2 2 0 0 1-2 1.8H8.1a2 2 0 0 1-2-1.8z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <nav aria-label="Navegação do rodapé">
+            <h2 class="footer-title">Navegue</h2>
+            <ul class="footer-list">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#cardapio">Cardápio</a></li>
+              <li><a href="#historia">Nossa História</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#localizacao">Localização</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <h2 class="footer-title">Peça agora</h2>
+            <ul class="footer-list">
+              <li><a href="https://www.ifood.com.br/" data-link="ifood">Pedir pelo iFood</a></li>
+              <li><a href="#contato" data-link="whatsapp">Falar no WhatsApp</a></li>
+              <li><a href="#contato" data-link="whatsapp-reserva">Reservar mesa</a></li>
+              <li><a href="https://www.instagram.com/" data-link="instagram">Instagram</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-title">Onde estamos</h2>
+            <div class="footer-contact">
+              <p data-text="address.oneLine">Rua Alberto Zanella, 0000 — Em frente ao Castelo</p>
+              <p><a href="tel:+554733330000" data-link="phone" data-text="contact.phone">+55 (47) 3333-0000</a></p>
+              <p><a href="#contato" data-link="whatsapp" data-text="contact.whatsapp">+55 (47) 99999-0000</a></p>
+              <p>Terça a domingo, a partir das 18h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <p>&copy; <span data-text="copyright.year">2026</span> Wotan&rsquo;s House. Todos os direitos reservados.</p>
+          <p>Fogo, sabor e boas histórias à mesa.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botão flutuante de WhatsApp -->
+    <a class="whatsapp-float" id="whatsapp-float" href="#contato" data-link="whatsapp" aria-label="Fale conosco pelo WhatsApp">
+      <span class="whatsapp-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" focusable="false"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2.1 22l5.36-1.4a9.8 9.8 0 0 0 4.58 1.16h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96A9.75 9.75 0 0 0 12.04 2zm0 1.8c2.15 0 4.17.84 5.69 2.36a7.98 7.98 0 0 1 2.36 5.68c0 4.44-3.61 8.05-8.06 8.05a8.1 8.1 0 0 1-4.1-1.12l-.3-.18-3.05.8.81-2.98-.19-.31a7.99 7.99 0 0 1-1.23-4.26c0-4.44 3.62-8.04 8.07-8.04zm-3.3 4.3c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.68 4.1 3.66 1.98.8 2.38.64 2.82.6.42-.04 1.38-.56 1.58-1.12.2-.56.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.54.12-.16.24-.6.76-.74.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.16-.7-.62-1.18-1.4-1.32-1.64-.14-.24-.02-.36.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.28-.72-1.76-.2-.46-.4-.4-.54-.4h-.48z" /></svg>
+      </span>
+      <span class="whatsapp-float__label">Fale conosco</span>
+    </a>
+  </body>
+</html>

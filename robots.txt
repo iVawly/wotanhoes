@@ -1,0 +1,6 @@
+# Wotan's House
+User-agent: *
+Allow: /
+
+# Trocar pelo dominio real ao publicar.
+Sitemap: https://www.wotanshouse.example/sitemap.xml
